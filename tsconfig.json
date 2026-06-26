@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "rootDir": ".",
+    "noEmit": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "moduleResolution": "node10",
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["src/**/*", "models/**/*", "scripts/**/*", "dist/models/Product.js"],
+  "exclude": ["node_modules", "dist"]
+}

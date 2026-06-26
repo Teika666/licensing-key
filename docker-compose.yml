@@ -1,0 +1,25 @@
+services:
+  license-api:
+    build: .
+    ports:
+      - "443:443"
+    env_file: .env
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+    cap_drop:
+      - ALL
+
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongo_data:

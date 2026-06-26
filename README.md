@@ -1,7 +1,7 @@
 # Production Deployment
 
 # Requisite
-## 1. OpenSSL
+1. OpenSSL
 
 ## 1. MongoDB (Atlas)
 Create a free cluster at https://cloud.mongodb.com
